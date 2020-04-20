@@ -22,15 +22,17 @@
                 Options Indexes FollowSymLinks MultiViews
                 # To make wordpress .htaccess work
                 AllowOverride All
-                Order allow,deny
-                allow from all
+                Order deny,allow
+                Deny from all
+                Allow from 127.0.0.1
         </Directory>
         <Directory /var/www/phpmyadmin>
                 Options Indexes FollowSymLinks MultiViews
                 # To make wordpress .htaccess work
                 AllowOverride All
-                Order allow,deny
-                allow from all
+                Order deny,allow
+                Deny from all
+                Allow from 127.0.0.1
         </Directory>
 
         ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
